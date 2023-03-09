@@ -1,0 +1,48 @@
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+
+label {
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: roboto;
+}
+
+.input {
+  padding: 10px;
+  color: #64748b;
+  outline-width: 0px;
+  width: 100%;
+}
+.btn-register {
+  background-color: #3b82f6;
+  border-radius: 5px;
+  border-width: 0px;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.heading-regi {
+  color: #2563eb;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: roboto;
+}
+
+.para-regi {
+  color: #334155;
+  font-size: 25px;
+  font-family: roboto;
+  font-weight: bold;
+}
+p {
+  color: #ff0b37;
+  font-size: 10px;
+  line-height: 15px;
+}
