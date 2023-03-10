@@ -12,21 +12,44 @@ import Login from './components/Login'
 
 import NotFound from './components/NotFound'
 
+const topicsList = [
+  {
+    id: 'ARTS_AND_CULTURE',
+    displayText: 'Arts and Culture',
+  },
+  {
+    id: 'CAREER_AND_BUSINESS',
+    displayText: 'Career and Business',
+  },
+  {
+    id: 'EDUCATION_AND_LEARNING',
+    displayText: 'Education and Learning',
+  },
+  {
+    id: 'FASHION_AND_BEAUTY',
+    displayText: 'Fashion and Learning',
+  },
+  {
+    id: 'GAMES',
+    displayText: 'Games',
+  },
+]
+
 class App extends Component {
   state = {
     username: '',
-    topic: '',
-    errorMessage: '',
+    topic: topicsList[0].displayText,
+    errorMessage: 'Please enter your name',
     isInvalid: false,
     meetPage: false,
   }
 
-  changeName = username => {
-    this.setState({username})
+  changeName = event => {
+    this.setState({username: event})
   }
 
-  changeTopic = topicName => {
-    this.setState({topic: topicName})
+  changeTopic = event => {
+    this.setState({topic: event})
   }
 
   submitForm = event => {
