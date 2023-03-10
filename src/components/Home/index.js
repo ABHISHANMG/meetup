@@ -9,12 +9,6 @@ import LoginContext from '../../context/index'
 import './index.css'
 
 class Home extends Component {
-  register = () => {
-    const {match} = this.props
-    const {history} = match
-    history.replace('/register')
-  }
-
   render() {
     return (
       <LoginContext.Consumer>
@@ -28,11 +22,7 @@ class Home extends Component {
                   <h1 className="heading">Welcome to meetup</h1>
                   <p className="para">Please register for the topic</p>
                   <Link to="/register">
-                    <button
-                      className="btn"
-                      type="button"
-                      onClick={this.register}
-                    >
+                    <button className="btn" type="button">
                       Register
                     </button>
                   </Link>
