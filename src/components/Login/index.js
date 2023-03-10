@@ -51,14 +51,10 @@ const Login = props => (
         changeTopic(event.target.value)
       }
 
-      const registered = () => {
-        const {match} = props
-        const {history} = match
-        history.replace('/')
-      }
-
       const onSubmitForm = event => {
         submitForm(event)
+        const {history} = props
+        history.replace('/')
       }
 
       return (
@@ -90,11 +86,7 @@ const Login = props => (
                     </option>
                   ))}
                 </select>
-                <button
-                  className="btn-register"
-                  type="submit"
-                  onClick={registered}
-                >
+                <button className="btn-register" type="submit">
                   Register Now
                 </button>
                 {isInvalid && <p>{errorMessage}</p>}
